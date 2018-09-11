@@ -2,6 +2,14 @@ import * as React from 'react'
 import { Component } from 'react'
 import Tile, { TileProps } from './Tile'
 
-export default function Board(props: any) {
-  return (<div className="board"><Tile x={2} y={3} value={1} /></div>)
+interface BoardProps {
+  tiles: Array<TileProps>
+}
+
+export default class Board extends Component<BoardProps, any> {
+
+  render() {
+    const { tiles } = this.props
+    return (<div className="board">{tiles.map(t => <Tile x={t.x} y={t.y} value={t.value} />)}</div>)
+  }
 }

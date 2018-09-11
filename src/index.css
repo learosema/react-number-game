@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -12,11 +16,44 @@ h1, h2, h3, h4, h5, h6 {
 
 
 header {
-  padding: 1em 4em;
+  padding: 1em;
   background: darkgreen;
   color: white;
 }
 
 main {
   margin: 1em;
+}
+
+.board {
+  position: relative;
+  width: 80vh;
+  height: 80vh;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.tile {
+  position: absolute;
+  width: calc(20% - 8px);
+  height: calc(20% - 8px);
+  transition: top 200ms linear, left 200ms linear;
+  top: -20%;
+  border-radius: 2px;
+  background: #f0f;
+  margin: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tile > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tile text {
+  font-family: fantasy;
+  font-size: 32px;
+  text-align: center;
+  fill: #213;
 }
