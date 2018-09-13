@@ -45,6 +45,21 @@ main {
   user-select: none;
 }
 
+.field {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  box-shadow: inset 2px 2px 4px 0 #ccc;
+  background: rgba(0,0,0,.0);
+  cursor: pointer;
+  user-select: none;
+  z-index: 100;
+}
+
+.field-marked {
+  border: 2px dashed black;
+}
+
 .tile > svg {
   width: 100%;
   height: 100%;
@@ -55,4 +70,13 @@ main {
   font-size: 32px;
   text-align: center;
   fill: #fff;
+}
+
+.mark {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-radius: 2px;
+  border: 2px dashed currentColor;
+  user-select: none;
 }

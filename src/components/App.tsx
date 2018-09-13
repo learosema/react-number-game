@@ -15,7 +15,7 @@ export default class App extends Component {
     const { tiles } = this.state
     return (<Fragment>
       <header>
-        <h1 className="test">react-number-game</h1>
+        <h1>React Number game</h1>
       </header>
       <main>
         <Board tiles={tiles} />
