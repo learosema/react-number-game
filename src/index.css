@@ -71,12 +71,3 @@ main {
   text-align: center;
   fill: #fff;
 }
-
-.mark {
-  position: absolute;
-  width: 20%;
-  height: 20%;
-  border-radius: 2px;
-  border: 2px dashed currentColor;
-  user-select: none;
-}
